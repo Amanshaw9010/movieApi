@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar responsive */
+@media only screen and (max-width:900px) {
+    .navbar_box_right {
+        width: 50%;
+    }
+
+    a {
+        font-size: 15px;
+    }
+
+    @media only screen and (max-width:750px) {
+        .navbar_box_right {
+            width: 50%;
+        }
+
+        .navbar_box_left {
+            width: 12%;
+        }
+
+        a {
+            font-size: 15px;
+        }
+    }
+    @media only screen and (max-width:640px) {
+        .navbar_box_right {
+            width: 50%;
+        }
+
+        .navbar_box_left {
+            width: 12%;
+        }
+
+        a {
+            font-size: 13px;
+            margin-right: 5px;
+        }
+    }
+    @media only screen and (max-width:550px) {
+        .backdrop_navbar {
+            height: 7vh;
+        }
+
+        .navbar_box_left {
+            width: 12%;
+        }
+
+        .navbar_box_right {
+            width: 50%;
+        }
+
+        a {
+            font-size: 12px;
+            margin-right: 3px;
+        }
+    }
+    @media only screen and (max-width:500px) {
+        .backdrop_navbar {
+            height: 6vh;
+        }
+
+        .navbar_box_right {
+            width: 50%;
+        }
+
+        a {
+            font-size: 10px;
+        }
+    }
+    @media only screen and (max-width:420px) {
+        .backdrop_navbar {
+            height: 5vh;
+        }
+
+        .navbar_box_left {
+            width: 12%;
+        }
+
+        .navbar_box_right {
+            width: 50%;
+        }
+
+        a {
+            font-size: 8px;
+        }
+    }
+}

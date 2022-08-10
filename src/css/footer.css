@@ -1,0 +1,45 @@
+.backdrop_footer {
+    height: 40vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.footer_box {
+    height: 98%;
+    width: 98%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer_box_left {
+    height: 100%;
+    width: 30%;
+}
+
+.footer_box_middle {
+    height: 100%;
+    width: 30%;
+}
+
+.footer_box_right {
+    height: 100%;
+    width: 30%;
+}
+
+.social_links {
+    height: 40px;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social_links i {
+    font-size: 1.4rem;
+}

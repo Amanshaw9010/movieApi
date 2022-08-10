@@ -1,0 +1,34 @@
+ .App{
+  height: auto;
+  width: 100vw;
+  }
+ .App h1{
+    text-align: center;
+ }
+ .backdrop_container{
+  height: auto;
+  width: 100vw;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .popular-movies{
+   height: auto;
+   width: 30%;
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+ @media only screen and (max-width: 600px){
+   .popular-movies{
+      height: auto;
+      width: 90%;
+       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+}

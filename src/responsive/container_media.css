@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* container responsive */
+@media only screen and (max-width:900px) {
+    .container_box{
+        height: 50%;
+    }
+    @media only screen and (max-width: 800px) {
+        .container_box{
+            height: 45%;
+        }
+    } 
+    
+    @media only screen and (max-width: 700px) {
+        .container_box{
+            height: 40%;
+        }
+    } 
+    
+    @media only screen and (max-width: 600px) {
+        .container_box{
+            height: 35%;
+            grid-auto-columns: 33%;
+        }
+    } 
+    
+    @media only screen and (max-width: 500px) {
+        .container_box{
+            height: 30%;
+        }
+    } 
+
+    @media only screen and (max-width: 450px) {
+        .container_box{
+            height: 25%;
+        }
+    } 
+}
+

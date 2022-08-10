@@ -1,0 +1,45 @@
+.backdrop_navbar{
+    height: 8vh;
+    width: 100vw;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+   
+}
+.navbar_box{
+    height: 96%;
+    width: 99%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar_box_left{
+    height: 100%;
+    width: 10%;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar_box_middle{
+    height: 100%;
+    width: 35%;
+ }
+.navbar_box_right{
+    height: 100%;
+    width: 40%;
+     display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: rgb(175, 210, 241);
+}
+a:hover{
+    color: rgb(69, 150, 220);
+}
+.navbar_box_left img{
+    height: 100%;
+}
+

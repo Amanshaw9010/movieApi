@@ -1,0 +1,16 @@
+ 
+    
+    @media only screen and (max-width: 600px) {
+        .backdrop_card {
+            height: 80%;
+            width: 16rem;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             flex-direction: column;
+        }
+    }
+
+ 
+
+
