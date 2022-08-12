@@ -9,7 +9,7 @@ const Container = () => {
     "https://api.themoviedb.org/3/movie/popular?api_key=6fc1c242b9f6b756db34c416105debf0";
 
   const [popular, setPopular] = useState([]);
-  useEffect(() => {
+   useEffect(() => {
     fetchPopular();
   }, []);
 
@@ -20,12 +20,14 @@ const Container = () => {
     setPopular(movies.results);
   };
 
+
+ 
+
   return (
     <>
-      <div className="App">
+       <div className="App">
         <h1>Popular Movies 2022</h1>
-
-        <div className='backdrop_container'>
+         <div className='backdrop_container'>
 
           <div className="popular-movies">
             {popular.map((movie) => {
