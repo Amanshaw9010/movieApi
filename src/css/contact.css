@@ -6,20 +6,42 @@
 
 .contact-form{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: aqua;
-    height: 65vh;
+    height: 100vh;
+}
+
+.contact_main{
+    width: 50%;
+    height: 90vh;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
 }
 
 .contact-form input{
     padding: 8px;
-    width: 40%;
+    width: 60%;
 }
-
 
 .contact-form label{
     margin-top: 20px;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.contact-form .contact_btn{
+    margin-top: 20px;
+    width: 60%;
+    border: none;
+    color: white;
+    background-color: rgb(26, 89, 207);
+    font-size: 17px;
+    font-weight: 550;
+    cursor: pointer;
 }
 

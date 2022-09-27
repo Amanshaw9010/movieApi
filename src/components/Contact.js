@@ -5,6 +5,8 @@ import '../css/contact.css'
 
 
 const Contact = () => {
+  
+  let blank = document.getElementById('blank');
 
   const [ContactUser, setContactUser] = useState({ name: "", email: "", phone: "", message: "" })
   const [userContact, setUserContact] = useState("");
@@ -40,7 +42,8 @@ const Contact = () => {
       console.log("message not found");
     } else {
       alert("message sent");
-      setContactUser({...ContactUser, message: " " });
+      setContactUser({ ...ContactUser, message: " " });
+      blank.value = " ";
     }
   }
 
@@ -65,11 +68,14 @@ const Contact = () => {
 
 
 
+
   useEffect(() => {
     userDetails();
 
   }, [])
+ 
 
+ 
 
 
 
@@ -84,19 +90,22 @@ const Contact = () => {
 
 
       <div className='contact-form'>
-        <label htmlFor="#">Name</label>
-        <input type="text" name='name' onChange={handleInput} value={userContact.name} />
+        <div className="contact_main">
+          <h1>Contact form</h1>
+          <label htmlFor="#">Name</label>
+          <input type="text" name='name' onChange={handleInput} value={userContact.name} />
 
-        <label htmlFor="#">Email</label>
-        <input type="email" name='email' onChange={handleInput} />
+          <label htmlFor="#">Email</label>
+          <input type="email" name='email' onChange={handleInput} value={userContact.email} />
 
-        <label htmlFor="#">Phone No.</label>
-        <input type="number" name='phone' onChange={handleInput} />
+          <label htmlFor="#">Phone No.</label>
+          <input type="number" name='phone' onChange={handleInput} value={userContact.phone} />
 
-        <label htmlFor="#">Message</label>
-        <textarea name="message" cols="80" rows="10" onChange={handleInput}></textarea>
+          <label htmlFor="#">Message</label>
+          <textarea name="message" id="blank" cols="60" rows="10" onChange={handleInput}></textarea>
 
-        <input type="submit" name='submit' onClick={contactForm} />
+          <input type="submit" className='contact_btn' name='submit' onClick={contactForm} />
+        </div>
       </div>
     </>
   )
