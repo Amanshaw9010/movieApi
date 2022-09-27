@@ -19,9 +19,13 @@ const Card = ({movie}) => {
            </div>
            <br />
            <div className='card_box_bottom'>
-          <p>    Release : {movie.genre_ids.map((genre)=>{
+          <p>    Release : {movie.release_date}</p>
+
+          {/* <p>    Release : {movie.genre_ids.map((genre)=>{
             return  genre+" ";
-          })}</p>
+          })}</p> */}
+
+
            </div>
         </div>
     </>

@@ -5,6 +5,20 @@
  .App h1{
     text-align: center;
  }
+ .weldiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  margin-bottom: 50px;
+  background-color: #9af082;
+ }
+ .welcome{
+  margin-top: 30px;
+  text-align: center;
+  font-size: 50px;
+  font-family: sans-serif;
+ }
  .backdrop_container{
   height: auto;
   width: 100vw;

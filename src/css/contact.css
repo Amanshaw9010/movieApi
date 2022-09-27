@@ -1,8 +1,25 @@
  
 .contact{
     background-color: aqua;
-    height: 52vh;
+    height: 20vh;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    height: 65vh;
+}
+
+.contact-form input{
+    padding: 8px;
+    width: 40%;
 }
 
 
+.contact-form label{
+    margin-top: 20px;
+}
 

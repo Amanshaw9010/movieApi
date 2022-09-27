@@ -45,7 +45,9 @@ textarea {
     width: 70%;
      padding: 5px;
     overflow: visible;
-   
+}
+.delete_commetn{
+    cursor: pointer;
 }
 @media only screen and (max-width: 600px){
     .view_comment_box{

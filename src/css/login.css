@@ -1,0 +1,36 @@
+.login_main {
+    background-color: rgb(55, 106, 208);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+.form_container {
+    background-color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0px 0px 20px 0px;
+}
+
+.form_container input {
+    padding: 10px;
+    width: 325px;
+    margin: 10px 0px;
+    font-size: 17px;
+}
+
+.form_container .login_submit{
+    width: 325px;
+    background-color: rgb(55, 106, 208);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.form_container .login_submit:hover{
+    background-color: rgb(31, 72, 152);
+}
+
