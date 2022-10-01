@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import '../css/login.css';
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import {UserContext } from '../App'
 
 const Login = () => {
     const navigate = useNavigate();
-
+     const {state , dispatch} = useContext(UserContext);
     const [loginUser, setloginUser] = useState({ email: "", password: "" })
 
     let name, value;
@@ -34,6 +36,7 @@ const Login = () => {
 
             const data = await res.json();
             navigate('/');
+            dispatch({type:'USER', payload: true});
            
         }
     }

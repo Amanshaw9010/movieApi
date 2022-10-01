@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useContext } from 'react'
+import { useEffect, useState } from 'react'
+import { UserContext } from '../App'
 import '../css/navbar.css'
 import logo from '../img/logo1.png'
 import user from '../img/user.png'
@@ -9,12 +11,63 @@ import '../responsive/navbar_media.css'
 
 const Navbar = () => {
 
+  const { state, dispatch } = useContext(UserContext);
+  console.log(state);
+
+  const Toggle = () => {
+    if (state) {
+      return (
+        <>
+          <a href="/logout"> <h2>logout</h2> </a>
+
+        </>
+      )
+    } else {
+      return (
+        <>
+          <a href="/signup"><h2>Sign up</h2></a><hr />
+          <a href="/login"><h2>Login</h2></a><hr />
+
+        </>
+      )
+    }
+  }
+
+
+
+
+
+
+
+
+  const [userName, setUserName] = useState(" ");
+  const userDp = async () => {
+    try {
+      const res = await fetch("/getdata", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json"
+        },
+      });
+
+
+      const welData = await res.json();
+      setUserName(welData.name);
+
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  useEffect(() => {
+    userDp();
+  }, [])
+
 
   let [bg, setbg] = useState('white');
   let [mode, setMode] = useState('Dark Mode')
   let [isActive, setIsActive] = useState(false);
 
-  let url = "https://joeschmoe.io/api/v1/random"
+  let url = "https://joeschmoe.io/api/v1/" + `${userName}`;
 
   const handleClick = () => {
     if (bg == 'white') {
@@ -27,13 +80,15 @@ const Navbar = () => {
     }
   }
 
+
+
   return (
     <>
       <div style={{ backgroundColor: bg }} className="backdrop_navbar">
         <div className="navbar_box">
           <div className="navbar_box_left">
 
-          
+
             <img src={logo} alt="" />
           </div>
           <div className="navbar_box_middle">
@@ -47,14 +102,12 @@ const Navbar = () => {
             <img src={url} className="user_img" onClick={(e) => setIsActive(!isActive)} />
           </div>
 
-
           {isActive && (
 
             <div className="menu_wrap">
-              <a href="/signup"><h2>Sign up</h2></a><hr />
-              <a href="/login"><h2>Login</h2></a><hr />
-              <a href="/logout"> <h2>logout</h2> </a> 
-              {/* <a href="/logout"><h2>Logout</h2></a> */}
+
+              <Toggle />
+
             </div>
 
           )}

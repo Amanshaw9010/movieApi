@@ -58,16 +58,13 @@ const Contact = () => {
       });
 
 
-      const userContact = await res.json();
-      setUserContact(userContact);
+      const userContactData = await res.json();
+      setUserContact(userContactData);
 
     } catch (error) {
       console.log(error);
     }
   }
-
-
-
 
   useEffect(() => {
     userDetails();
