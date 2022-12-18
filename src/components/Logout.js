@@ -21,8 +21,9 @@ const Logout = () => {
             credentials: "include"
         }).then((res) => {
              
-            dispatch({type:'USER', payload : false});
+           
             navigate('/login');
+            dispatch({type:'USER', payload: false});
            
             if (res.status !== 200) {
                 const error = new Error(res.error);

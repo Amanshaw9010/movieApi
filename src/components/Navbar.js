@@ -7,8 +7,6 @@ import user from '../img/user.png'
 // import Logout from './Logout'
 import '../responsive/navbar_media.css'
 
-
-
 const Navbar = () => {
 
   const { state, dispatch } = useContext(UserContext);
@@ -18,6 +16,12 @@ const Navbar = () => {
     if (state) {
       return (
         <>
+
+
+          <a href="/"> <h2>Home</h2> </a>
+          <a href="/contact"> <h2>Contact</h2> </a>
+
+          <a href="#" onClick={handleClick} > <h2>{mode}</h2> </a>
           <a href="/logout"> <h2>logout</h2> </a>
 
         </>
@@ -25,6 +29,11 @@ const Navbar = () => {
     } else {
       return (
         <>
+
+          <a href="/"> <h2>Home</h2> </a>
+          <a href="/contact"> <h2>Contact</h2> </a>
+
+          <a href="#" onClick={handleClick} > <h2>{mode}</h2> </a>
           <a href="/signup"><h2>Sign up</h2></a><hr />
           <a href="/login"><h2>Login</h2></a><hr />
 
@@ -60,6 +69,7 @@ const Navbar = () => {
   }
   useEffect(() => {
     userDp();
+    Toggle();
   }, [])
 
 
@@ -92,16 +102,17 @@ const Navbar = () => {
             <img src={logo} alt="" />
           </div>
           <div className="navbar_box_middle">
+
           </div>
           <div className="navbar_box_right">
-            <a href="/"> <h2>Home</h2> </a>
-            <a href="/contact"> <h2>Contact</h2> </a>
-            {/* <a href="/logout"> <h2>logout</h2> </a> */}
-            <a href="#" onClick={handleClick} > <h2>{mode}</h2> </a>
+            <Toggle />
 
-            <img src={url} className="user_img" onClick={(e) => setIsActive(!isActive)} />
+            {/* <img src={url} className="user_img" onClick={(e) => {
+              e.preventDefault();
+              setIsActive(!isActive)}} /> */}
           </div>
 
+          {/* 
           {isActive && (
 
             <div className="menu_wrap">
@@ -110,7 +121,7 @@ const Navbar = () => {
 
             </div>
 
-          )}
+          )} */}
 
 
 
